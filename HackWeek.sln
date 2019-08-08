@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS", "TTS\TTS.csproj", "{3BF4A0A9-A53B-4ACF-B4E1-354A1A319028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfLib", "PdfReader\PdfLib.csproj", "{E063732C-99CF-401A-B5FC-9515A377C145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByLawyersHackWeb", "ByLawyersHackWeb\ByLawyersHackWeb.csproj", "{B9A22997-4BA7-4E70-82D8-F5524493BDE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BF4A0A9-A53B-4ACF-B4E1-354A1A319028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF4A0A9-A53B-4ACF-B4E1-354A1A319028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF4A0A9-A53B-4ACF-B4E1-354A1A319028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF4A0A9-A53B-4ACF-B4E1-354A1A319028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E063732C-99CF-401A-B5FC-9515A377C145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E063732C-99CF-401A-B5FC-9515A377C145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E063732C-99CF-401A-B5FC-9515A377C145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E063732C-99CF-401A-B5FC-9515A377C145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A22997-4BA7-4E70-82D8-F5524493BDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A22997-4BA7-4E70-82D8-F5524493BDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A22997-4BA7-4E70-82D8-F5524493BDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A22997-4BA7-4E70-82D8-F5524493BDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED82A583-5A43-4B98-A6EF-3389F6E977D6}
+	EndGlobalSection
+EndGlobal
