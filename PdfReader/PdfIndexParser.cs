@@ -38,9 +38,9 @@ namespace PdfLib
             return contentItems;
         }
 
-        public static string GetContentPagesText(string pdfFilePath, int numberOfIndexPages)
+        public static string GetContentPagesText(System.IO.Stream pdfFileStream, int numberOfIndexPages)
         {
-            using (PdfReader reader = new PdfReader(pdfFilePath))
+            using (PdfReader reader = new PdfReader(pdfFileStream))
             {
                 string text = string.Empty;
                 for (int page = 1; page <= numberOfIndexPages; page++)

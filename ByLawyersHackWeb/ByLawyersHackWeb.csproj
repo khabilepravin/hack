@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\FULL COMMENTARY - PERSONAL INJURY %28NSW%29.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\FULL COMMENTARY - PERSONAL INJURY (NSW).pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PdfReader\PdfLib.csproj" />
     <ProjectReference Include="..\TTS\TTS.csproj" />
   </ItemGroup>
@@ -17,6 +25,15 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview7.19362.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0-preview7-19378-04" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Data\FULL COMMENTARY - PERSONAL INJURY %28NSW%29.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\FULL COMMENTARY - PERSONAL INJURY %28NSW%29.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
