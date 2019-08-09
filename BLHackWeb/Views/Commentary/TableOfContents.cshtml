@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PdfLib.ContentItem>
+@{
+    ViewData["Title"] = "TableOfContents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>TableOfContents</h1>
+
+<ul>
+    @foreach (var contentItem in Model)
+    {
+        <li>@contentItem.Title</li>
+    }
+</ul>
