@@ -4,11 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>TableOfContents</h1>
+<h5>Table Of Contents</h5>
 
-<ul>
+<div class="list-group">
     @foreach (var contentItem in Model)
     {
-        <li>@contentItem.Title</li>
+        <a class="list-group-item list-group-item-action">@contentItem.Title</a>
     }
-</ul>
+</div>

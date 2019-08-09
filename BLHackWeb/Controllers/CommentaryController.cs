@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using BLHackWeb.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
+using System.Linq;
 
 namespace BLHackWeb.Controllers
 {
@@ -11,11 +13,15 @@ namespace BLHackWeb.Controllers
         {
             _hostingEnvironment = hostingEnvironment;
         }
-        public IActionResult TableOfContents()
+        public IActionResult TableOfContents(string id)
         {
             var provider = new PhysicalFileProvider(_hostingEnvironment.ContentRootPath);
-           
-            var fileInfo = provider.GetFileInfo("wwwroot/FULL COMMENTARY - PERSONAL INJURY (NSW).pdf");
+
+            var contentItem = (from c in DataSource.subscriptionItems
+                               where c.Id == id
+                               select c).FirstOrDefault<SubscriptionItem>();
+
+            var fileInfo = provider.GetFileInfo($"wwwroot/{contentItem.CommentaryFileName}");
 
             var stream = fileInfo.CreateReadStream();
 

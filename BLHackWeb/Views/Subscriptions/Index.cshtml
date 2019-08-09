@@ -1,7 +1,9 @@
-﻿@model string;
+﻿@model BLHackWeb.Models.SubscriptionItem;
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index @Model.ToString()</h1>
-
+<h5>@Model.Name.ToString()</h5>
+<div class="list-group">
+    <a asp-controller="commentary" asp-action="tableofcontents" asp-route-id="@Model.Id" class="list-group-item list-group-item-action">@Model.CommentaryFileName</a>
+</div>
