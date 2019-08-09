@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
 
-namespace ByLawyersHackWeb.Controllers
+namespace BLHackWeb.Controllers
 {
     public class CommentaryController : Controller
     {

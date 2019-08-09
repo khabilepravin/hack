@@ -1,10 +1,13 @@
-﻿@{
+﻿@model List<BLHackWeb.Controllers.SubscriptionItem>
+@{
     ViewData["Title"] = "Home Page";
 }
 <div class="text-center">
     <h4>Subscriptions</h4> 
-    <div class="list-group">        
-        <a href="/subscriptions/index?id=1" class="list-group-item list-group-item-action">Personal Injury</a>
-        <a href="/subscriptions/index?id=2" class="list-group-item list-group-item-action">Mortgages</a>
+    <div class="list-group">
+        @foreach (var item in Model)
+        {
+            <a href="/subscriptions/index?id=@item.Id" class="list-group-item list-group-item-action">@item.Name</a>
+        }
     </div>
 </div>
