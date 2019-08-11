@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
+using System.IO;
 using System.Linq;
 using TTS;
 
@@ -33,7 +34,7 @@ namespace BLHackWeb.Controllers
             return View(new TableOfContentViewModel { Subscription = subscriptionItem, TableOfContents = tableOfContents });
         }
 
-        public IActionResult GenerateAudio(string id, int pageNumber)
+        public FileResult GenerateAudio(string id, int pageNumber)
         {
             var contentItem = (from c in DataSource.subscriptionItems
                                where c.Id == id
@@ -48,7 +49,9 @@ namespace BLHackWeb.Controllers
 
             TTSClient.CreateSpeechFile(pageContent, audioFilePath);
 
-            return Ok();
+            var fs = new FileStream(audioFilePath, FileMode.Open);
+
+            return new FileStreamResult(fs, "audio/mpeg");
         }
     }
 }
