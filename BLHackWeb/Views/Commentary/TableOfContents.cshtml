@@ -1,14 +1,15 @@
-﻿@model IEnumerable<PdfLib.ContentItem>
-@{
+﻿@model TableOfContentViewModel
     ViewData["Title"] = "TableOfContents";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h5>Table Of Contents</h5>
-
 <div class="list-group">
-    @foreach (var contentItem in Model)
+    @foreach (var contentItem in Model.TableOfContents)
     {
-        <a class="list-group-item list-group-item-action">@contentItem.Title</a>
+        <a asp-controller="commentary" 
+           asp-action="generateaudio" 
+           asp-route-id="@Model.Subscription.Id" 
+           asp-route-pageNumber="@contentItem.PageNumber" 
+           class="list-group-item list-group-item-action">@contentItem.Title</a>
     }
 </div>

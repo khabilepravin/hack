@@ -5,7 +5,7 @@ namespace TTS
 {
     public class TTSClient
     {
-        public static void CreateSpeechFile(string inputText, string fileName)
+        public static void CreateSpeechFile(string inputText, string filPath)
         {
             TextToSpeechClient client = TextToSpeechClient.Create();
 
@@ -39,7 +39,7 @@ namespace TTS
             });
 
             // Write the binary AudioContent of the response to an MP3 file.
-            using (Stream output = File.Create($"{fileName}.mp3"))
+            using (Stream output = File.Create(filPath))
             {
                 response.AudioContent.WriteTo(output);
             }
